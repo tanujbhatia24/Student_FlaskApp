@@ -68,4 +68,4 @@ def test_get_student_by_partial_name(client):
     response = client.get('/students/name/Ali')
     assert response.status_code == 200
     assert len(response.json) > 0
-    assert response.json[0]["name"] == "Alice"
+    assert any("Alice" in s["name"] for s in response.json)

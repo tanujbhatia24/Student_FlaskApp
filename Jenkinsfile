@@ -22,7 +22,8 @@ pipeline {
 
         stage('Run Flask App') {
             steps {
-                sh 'nohup python app.py &'
+                sh 'docker run -d 5000:5000 python:3.10 nohup python app.py &
+'
             }
         }
     }

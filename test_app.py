@@ -1,5 +1,5 @@
 import pytest
-from app import app , students_collection, add_student # Import your Flask app
+from app import app , students_collection, add_student, get_students, get_student_by_id, delete_student # Import your Flask app
 
 @pytest.fixture
 def client():

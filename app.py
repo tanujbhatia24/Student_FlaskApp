@@ -41,6 +41,8 @@ def home():
 @app.route('/students', methods=['POST'])
 def add():
     data = request.get_json()
+    if "name" not in data or "age" not in data:
+        return jsonify({"error": "Missing 'name' or 'age'"}), 400
     return jsonify(add_student(data)), 201
 
 @app.route('/students', methods=['GET'])

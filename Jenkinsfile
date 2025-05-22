@@ -31,17 +31,6 @@ pipeline {
             }
         }
 
-        stage('Run Flask App Locally') {
-            steps {
-                sh '''
-                    docker stop flask_app || true
-                    docker rm flask_app || true
-                    docker build -t student_flaskapp .
-                    docker run -d -p 5000:5000 --name flask_app student_flaskapp
-                '''
-            }
-        }
-
         stage('Deploy to EC2') {
             steps {
                 sshagent (credentials: ['tanuj-ec2-ssh-key']) {  // 🔁 Replace with your SSH credential ID in Jenkins

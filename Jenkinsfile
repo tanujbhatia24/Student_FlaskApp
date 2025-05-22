@@ -35,7 +35,7 @@ pipeline {
             steps {
                 sshagent (credentials: ['tanuj-ec2-ssh-key']) {  // 🔁 Replace with your SSH credential ID in Jenkins
                     sh """
-                        ssh -o StrictHostKeyChecking=no ${EC2_HOST} '
+                        ssh -o StrictHostKeyChecking=no ${EC2_HOST} "echo ✅ Connected to EC2!" ' 
                             pkill -f flask || true
                             rm -rf ${REMOTE_APP_DIR}
                             git clone ${REPO_URL} ${REMOTE_APP_DIR}

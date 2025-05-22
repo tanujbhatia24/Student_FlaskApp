@@ -52,7 +52,7 @@ pipeline {
         }
     }
 
-    post {
+   """ post {
         success {
             mail to: 'tanujbhatia0001@gmail.com',
                  subject: "✅ SUCCESS: Build #${env.BUILD_NUMBER}",
@@ -63,5 +63,5 @@ pipeline {
                  subject: "❌ FAILURE: Build #${env.BUILD_NUMBER}",
                  body: "Build failed. View it at: ${env.BUILD_URL}"
         }
-    }
+    }"""
 }

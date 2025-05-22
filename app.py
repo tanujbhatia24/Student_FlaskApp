@@ -10,7 +10,7 @@ import os
 app = Flask(__name__)
 
 # Connect to MongoDB
-MONGO_SECRET_KEY = os.getenv("MONGO_SECRET_KEY")
+MONGO_SECRET_KEY = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_SECRET_KEY)  # Replace with your MongoDB URI
 db = client["student_db"]  # Database name
 students_collection = db["students"]  # Collection name

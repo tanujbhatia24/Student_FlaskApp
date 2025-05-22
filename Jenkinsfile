@@ -5,7 +5,7 @@ pipeline {
         EC2_HOST = "ec2-user@13.235.79.61"  // 🔁 Replace with your EC2 public IP
         REPO_URL = "https://github.com/tanujbhatia24/Student_FlaskApp.git"
         REMOTE_APP_DIR = "/home/ec2-user/Student_FlaskApp"
-        DOCKER_IMAGE = "Student_FlaskApp"
+        DOCKER_IMAGE = "student_flaskapp"
     }
 
     stages {

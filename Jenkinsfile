@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/tanujbhatia24/Student_FlaskApp.git'
+                git branch: 'main', url: 'https://github.com/tanujbhatia24/Student_FlaskApp.git'
             }
         }
 

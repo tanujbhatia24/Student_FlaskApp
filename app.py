@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from pymongo import MongoClient
 from bson import ObjectId
 from bson.regex import Regex
+from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__)

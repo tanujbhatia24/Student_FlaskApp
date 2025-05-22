@@ -36,8 +36,8 @@ pipeline {
                 sh '''
                     docker stop flask_app || true
                     docker rm flask_app || true
-                    docker build -t student_flaskApp .
-                    docker run -d -p 5000:5000 --name flask_app student_flaskApp
+                    docker build -t student_flaskapp .
+                    docker run -d -p 5000:5000 --name flask_app student_flaskapp
                 '''
             }
         }

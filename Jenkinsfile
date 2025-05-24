@@ -47,8 +47,8 @@ pipeline {
                         # Check and install git if missing
                         if ! command -v git &> /dev/null; then
                             echo "Git not found, installing git..."
-                            sudo apt-get update
-                            sudo apt-get install -y git
+                            sudo yum-get update
+                            sudo yum-get install -y git
                         else
                             echo "Git is already installed"
                         fi
@@ -56,8 +56,8 @@ pipeline {
                         # Check and install python3 if missing
                         if ! command -v python3 &> /dev/null; then
                             echo "Python3 not found, installing python3..."
-                            sudo apt-get update
-                            sudo apt-get install -y python3
+                            sudo yum-get update
+                            sudo yum-get install -y python3
                         else
                             echo "Python3 is already installed"
                         fi

@@ -100,4 +100,17 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            mail to: 'tanujbhatia0001@gmail.com',
+                 subject: "✅ SUCCESS: Build #${env.BUILD_NUMBER}",
+                 body: "Build succeeded and deployed to EC2. View it at: ${env.BUILD_URL}"
+        }
+        failure {
+            mail to: 'tanujbhatia0001@gmail.com',
+                 subject: "❌ FAILURE: Build #${env.BUILD_NUMBER}",
+                 body: "Build failed. View it at: ${env.BUILD_URL}"
+        }
+    }
 }

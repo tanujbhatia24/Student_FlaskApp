@@ -65,8 +65,8 @@ pipeline {
                         # Check if pip3 is installed, if not install it
                         if ! command -v pip3 &> /dev/null; then
                             echo "pip3 not found, installing python3-pip..."
-                            sudo apt-get update
-                            sudo apt-get install -y python3-pip
+                            sudo yum update
+                            sudo yum install -y python3-pip
                         else
                             echo "pip3 is already installed"
                         fi

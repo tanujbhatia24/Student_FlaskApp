@@ -46,8 +46,7 @@ pipeline {
                         echo "Connected to EC2 as: \$(whoami)"
 
                         # Create app directory if it doesn't exist
-                        whoami
-                        mkdir -p ${REMOTE_APP_DIR}
+                        sudo mkdir -p ${REMOTE_APP_DIR}
                         cd ${REMOTE_APP_DIR}
 
                         if [ -d "${REPO_APP_DIR}/.git" ]; then

@@ -41,35 +41,36 @@ pipeline {
             steps {
                 sshagent (credentials: ['tanuj-ec2-ssh-key']) {
                     sh """
-                    ssh -o StrictHostKeyChecking=no ${EC2_HOST} '
-                    set -xe
-                    echo "Connected to EC2 as: \$(whoami)!"
+                        ssh -o StrictHostKeyChecking=no ${EC2_HOST} '
+                        set -xe
+                        echo "Connected to EC2 as: \$(whoami)"
 
-                    # Create app directory if it doesn't exist
-                    whoami
-                    mkdir -p ${REMOTE_APP_DIR}
-                    cd ${REMOTE_APP_DIR}
+                        # Create app directory if it doesn't exist
+                        whoami
+                        mkdir -p ${REMOTE_APP_DIR}
+                        cd ${REMOTE_APP_DIR}
 
-                    if [ -d "${REPO_APP_DIR}/.git" ]; then
-                        echo "Repo exists. Pulling latest changes!"
+                        if [ -d "${REPO_APP_DIR}/.git" ]; then
+                            echo "Repo exists. Pulling latest changes!"
+                            cd ${REPO_APP_DIR}
+                            git reset --hard HEAD
+                            git pull origin main
+                        else
+                            echo "Cloning fresh repo!"
+                            git clone ${REPO_URL}
+                        fi
+
                         cd ${REPO_APP_DIR}
-                        git reset --hard HEAD
-                        git pull origin main
-                    else
-                        echo "Cloning fresh repo!"
-                        git clone ${REPO_URL}
-                    fi
 
-                    cd ${REPO_APP_DIR}
+                        echo "Updating .env file!"
+                        cat > .env <<EOL
+        MONGO_URI=${MONGO_URI}
+        PORT=5000
+        EOL
 
-                    echo "Updating .env file!"
-                    cat > .env <<EOL
-                MONGO_URI=${MONGO_URI}
-                PORT=5000
-                EOL
-
-                    echo ".env updated:"
-                    cat .env '
+                        echo ".env updated:"
+                        cat .env 
+                    '
                 """
                 }
             }

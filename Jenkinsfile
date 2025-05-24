@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_HOST = "ec2-user@3.110.189.141"  // Replace with your EC2 public IP
+        EC2_HOST = "ec2-user@43.204.236.54"  // Replace with your EC2 public IP
         REPO_URL = "https://github.com/tanujbhatia24/Student_FlaskApp.git"
         REMOTE_APP_DIR = "/home/ec2-user/app"
         REPO_APP_DIR = "/home/ec2-user/app/Student_FlaskApp"
@@ -44,8 +44,6 @@ pipeline {
                         ssh -o StrictHostKeyChecking=no ${EC2_HOST} '
                         set -xe
                         echo "Connected to EC2 as: \$(whoami)"
-
-                        # Create app directory if it doesn't exist
                         mkdir -p ${REMOTE_APP_DIR}
                         cd ${REMOTE_APP_DIR}
 

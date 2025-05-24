@@ -62,6 +62,15 @@ pipeline {
                             echo "Python3 is already installed"
                         fi
 
+                        # Check if pip3 is installed, if not install it
+                        if ! command -v pip3 &> /dev/null; then
+                            echo "pip3 not found, installing python3-pip..."
+                            sudo apt-get update
+                            sudo apt-get install -y python3-pip
+                        else
+                            echo "pip3 is already installed"
+                        fi
+
                         mkdir -p ${REMOTE_APP_DIR}
                         cd ${REMOTE_APP_DIR}
 

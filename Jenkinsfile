@@ -46,22 +46,23 @@ pipeline {
                     echo "Connected to EC2!"
 
                     # Create app directory if it doesn't exist
-                    mkdir -p ${REMOTE_APP_DIR}
+                    sudo mkdir -p ${REMOTE_APP_DIR}
+                    sudo chown -R ec2-user:ec2-user ${REMOTE_APP_DIR}
                     cd ${REMOTE_APP_DIR}
 
                     if [ -d "${REPO_APP_DIR}/.git" ]; then
-                        echo "Repo exists. Pulling latest changes..."
+                        echo "Repo exists. Pulling latest changes!"
                         cd ${REPO_APP_DIR}
                         git reset --hard HEAD
                         git pull origin main
                     else
-                        echo "Cloning fresh repo..."
+                        echo "Cloning fresh repo!"
                         git clone ${REPO_URL}
                     fi
 
                     cd ${REPO_APP_DIR}
 
-                    echo "Updating .env file..."
+                    echo "Updating .env file!"
                     cat > .env <<EOL
                 MONGO_URI=${MONGO_URI}
                 PORT=5000

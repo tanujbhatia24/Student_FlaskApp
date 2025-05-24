@@ -7,7 +7,7 @@ pipeline {
         REMOTE_APP_DIR = "/home/ec2-user/app"
         REPO_APP_DIR = "/home/ec2-user/app/Student_FlaskApp"
         DOCKER_IMAGE = "student_flaskapp"
-        MONGO_URI = credentials('tanuj-mongo-uri')  // 👈 Use Jenkins credentials
+        MONGO_URI = credentials('tanuj-MONGO-URI')  // 👈 Use Jenkins credentials
     }
 
     stages {

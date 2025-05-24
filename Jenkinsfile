@@ -45,7 +45,9 @@ pipeline {
                             set -xe
                             echo "Connected to EC2!"
                             rm -rf ${REMOTE_APP_DIR}
-                            git clone ${REPO_URL} ${REMOTE_APP_DIR}
+                            mkdir ${REMOTE_APP_DIR}
+                            cd ${REMOTE_APP_DIR}
+                            git clone ${REPO_URL}
                             cd ${REPO_APP_DIR}
                             echo "Creating .env file!"
                             cat > .env <<EOL

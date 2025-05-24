@@ -32,6 +32,7 @@ pipeline {
             steps {
                 sh '''
                     export MONGO_URI=${MONGO_URI}
+                    echo MONGO_URI
                     venv/bin/pytest test_app.py --maxfail=1 --disable-warnings -q
                 '''
             }

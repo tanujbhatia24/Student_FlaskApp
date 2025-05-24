@@ -30,7 +30,10 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'venv/bin/pytest test_app.py --maxfail=1 --disable-warnings -q'
+                sh '''
+                    export MONGO_URI=${MONGO_URI}
+                    venv/bin/pytest test_app.py --maxfail=1 --disable-warnings -q
+                '''
             }
         }
 

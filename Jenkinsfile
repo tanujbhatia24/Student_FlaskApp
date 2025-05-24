@@ -43,12 +43,11 @@ pipeline {
                     sh """
                     ssh -o StrictHostKeyChecking=no ${EC2_HOST} '
                     set -xe
-                    echo "Connected to EC2!"
+                    echo "Connected to EC2 as: \$(whoami)!"
 
                     # Create app directory if it doesn't exist
                     whoami
                     mkdir -p ${REMOTE_APP_DIR}
-                    chown -R ec2-user:ec2-user ${REMOTE_APP_DIR}
                     cd ${REMOTE_APP_DIR}
 
                     if [ -d "${REPO_APP_DIR}/.git" ]; then

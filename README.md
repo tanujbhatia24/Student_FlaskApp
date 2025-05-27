@@ -38,6 +38,24 @@ Install the following plugins from Manage Jenkins > Plugin Manager:<br>
 1. Git
 2. Pipeline
 3. Email Extension
+
+### 4. Add MongoDB URI as Jenkins Credential
+1. Go to Jenkins Dashboard > Manage Jenkins > Credentials
+2. Choose the domain (usually (global))
+3. Click Add Credentialsbr<>
+   Kind: Secret text<br>
+   Secret: Your MongoDB URI (e.g., mongodb+srv://user:pass@cluster.mongodb.net/db)<br>
+   ID: tanuj-MONGO-URI (must match the ID used in Jenkinsfile)<br>
+   Description: MongoDB connection string<br>
+
+### 5. Add EC2 SSH Private Key in Jenkins
+1. Go to Jenkins Dashboard > Manage Jenkins > Credentials
+2. Select the appropriate domain (e.g., (global))
+3. Click Add Credentials<br>
+   Kind: SSH Username with private key<br>
+   Username: ec2-user (or whatever your EC2 login username is)<br>
+   Private Key: Choose "Enter directly", and paste your .pem key (e.g., tanuj-ec2-key.pem)<br>
+   ID: tanuj-EC2-SSH (you will use this ID in Jenkinsfile)<br>
 ---
 
 ## Triggers

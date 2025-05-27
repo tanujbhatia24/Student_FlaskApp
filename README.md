@@ -1,41 +1,32 @@
 # Jenkins CI/CD Pipeline for Flask Application
 
-## 📌 Objective
-
+## Objective
 Set up a Jenkins pipeline to automate the build, test, and deployment of a simple Python Flask web application.
-
 ---
 
-## 🚀 Project Overview
-
+## Project Overview
 This project demonstrates how to configure and run a CI/CD pipeline using Jenkins to:
-
 - Install dependencies
 - Run unit tests with `pytest`
 - Deploy the application to a staging environment
 - Trigger builds automatically upon code changes
 - Notify team members via email about pipeline status
-
 ---
 
-## 📁 Sample Flask Application Repository
+## Sample Flask Application Repository
 
 Fork this sample Flask app to begin:  
 🔗 [Sample Python Flask App](https://github.com/mohanDevOps-arch/Student_App)
-
 ---
 
-## 🛠️ Setup
-
+## Setup
 ### 1. Jenkins Installation
-
 - **Option 1**: Install Jenkins on a local or cloud-based VM (e.g., AWS EC2, DigitalOcean, GCP Compute Engine).
 - **Option 2**: Use a cloud-based Jenkins service (e.g., CloudBees, Jenkins X).
 
 Follow the official [Jenkins Installation Guide](https://www.jenkins.io/doc/book/installing/).
 
 ### 2. Install Required Tools on Jenkins Server
-
 ```bash
 sudo yum update
 sudo yum install python3 python3-pip
@@ -44,9 +35,9 @@ pip3 install virtualenv pytest
 
 ### 3. Install Jenkins Plugins<br>
 Install the following plugins from Manage Jenkins > Plugin Manager:<br>
-<br>Git
-<br>Pipeline
-<br>Email Extension
+1. Git
+2. Pipeline
+3. Email Extension
 ---
 
 ## Triggers
@@ -58,7 +49,7 @@ Install the following plugins from Manage Jenkins > Plugin Manager:<br>
    Trigger: Just the push event<br>
 
 ### Jenkins Configuration
-1. In your Jenkins project:
+1. In your Jenkins project:<br>
    Check Build Triggers > “GitHub hook trigger for GITScm polling”
 
 ### Notifications
@@ -66,8 +57,9 @@ Install the following plugins from Manage Jenkins > Plugin Manager:<br>
 2. Set up SMTP under Email Notification
 3. Configure Email Extension Plugin:
    Email notifications are handled in the post block of your Jenkinsfile
+---
 
-### Documentation
+## Documentation
 ### Prerequisites
 1. Python 3.x and pip
 2. Jenkins installed and running

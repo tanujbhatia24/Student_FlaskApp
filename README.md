@@ -2,7 +2,6 @@
 
 ## Objective
 Set up a Jenkins pipeline to automate the build, test, and deployment of a simple Python Flask web application.
----
 
 ## Project Overview
 This project demonstrates how to configure and run a CI/CD pipeline using Jenkins to:
@@ -14,7 +13,6 @@ This project demonstrates how to configure and run a CI/CD pipeline using Jenkin
 ---
 
 ## Sample Flask Application Repository
-
 Fork this sample Flask app to begin:  
 🔗 [Sample Python Flask App](https://github.com/mohanDevOps-arch/Student_App)
 ---

@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_HOST = "ec2-user@43.204.236.54"  // Replace with your EC2 public IP
+        EC2_HOST = "ec2-user@13.203.226.140"  // Replace with your EC2 public IP
         REPO_URL = "https://github.com/tanujbhatia24/Student_FlaskApp.git"
         REMOTE_APP_DIR = "/home/ec2-user/app"
         REPO_APP_DIR = "/home/ec2-user/app/Student_FlaskApp"

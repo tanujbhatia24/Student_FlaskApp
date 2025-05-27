@@ -21,7 +21,7 @@ This project demonstrates how to configure and run a CI/CD pipeline using Jenkin
 ## 📁 Sample Flask Application Repository
 
 Fork this sample Flask app to begin:  
-🔗 [Sample Python Flask App](https://github.com/pallets/flask/tree/main/examples/tutorial)
+🔗 [Sample Python Flask App](https://github.com/mohanDevOps-arch/Student_App)
 
 ---
 

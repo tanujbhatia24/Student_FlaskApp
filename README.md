@@ -37,8 +37,8 @@ Follow the official [Jenkins Installation Guide](https://www.jenkins.io/doc/book
 ### 2. Install Required Tools on Jenkins Server
 
 ```bash
-sudo apt update
-sudo apt install python3 python3-pip
+sudo yum update
+sudo yum install python3 python3-pip
 pip3 install virtualenv pytest
 ```
 

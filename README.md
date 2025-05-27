@@ -92,9 +92,23 @@ Install the following plugins from Manage Jenkins > Plugin Manager:<br>
 5. Screenshots showing each pipeline stage (build, test, deploy)
 
 ### Screenshots
-1. Jenkins dashboard showing pipeline success
+1. Jenkins dashboard showing pipeline success<br>
+   <img width="686" alt="image" src="https://github.com/user-attachments/assets/17ac6ed3-44bd-4e6a-bc25-7a99691eb34f" /><br>
 
-2. Console output for each stage
+2. Jenkins pripeline overview snapshot<br>
+   ![image](https://github.com/user-attachments/assets/dc0405cc-72a5-4b72-afb6-4f4d3eadb6dc)<br>
 
-3. Email notification screenshot
+3. Email notification screenshot<br>
+   Failure Email<br>
+   <img width="331" alt="image" src="https://github.com/user-attachments/assets/2b38ac01-276c-4d2e-9511-4ef56213ec86" /><br>
+   Success Email<br>
+   <img width="487" alt="image" src="https://github.com/user-attachments/assets/ae8a57b1-0910-4453-b5be-859fb123e301" /><br>
 
+4. Application Screenshots<br>
+   ![image](https://github.com/user-attachments/assets/5702d435-98f7-4d02-9ac3-8568ac377a6a)<br>
+   ![image](https://github.com/user-attachments/assets/71514d29-61f4-4685-ac2c-053ec411debe)<br>
+   <img width="271" alt="image" src="https://github.com/user-attachments/assets/dcac4fde-e7ae-4eb2-8f1b-69a73a29a2be" /><br>
+---
+
+## License
+This project is intended for educational and demonstration purposes. You are welcome to use and adapt it as a reference; however, please ensure that your work represents your own understanding and is not reproduced verbatim.

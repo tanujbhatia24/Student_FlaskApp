@@ -109,6 +109,11 @@ Install the following plugins from Manage Jenkins > Plugin Manager:<br>
    ![image](https://github.com/user-attachments/assets/5702d435-98f7-4d02-9ac3-8568ac377a6a)<br>
    ![image](https://github.com/user-attachments/assets/71514d29-61f4-4685-ac2c-053ec411debe)<br>
    <img width="271" alt="image" src="https://github.com/user-attachments/assets/dcac4fde-e7ae-4eb2-8f1b-69a73a29a2be" /><br>
+
+6. Adding new users<br>
+   <img width="489" alt="image" src="https://github.com/user-attachments/assets/139c1aff-2719-46f0-b817-730960f4e66d" /><br>
+   <img width="217" alt="image" src="https://github.com/user-attachments/assets/35ec39d1-beb5-4ad6-ab36-b8db842bebef" /><br>
+   <img width="418" alt="image" src="https://github.com/user-attachments/assets/8ba4da7c-c4ed-4416-ab1b-c0eaf95fc93d" /><br>
 ---
 
 ## License
